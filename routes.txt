@@ -1,0 +1,156 @@
+                   filter_calendar POST       /calendar/filter(.:format)                                 calendar#set_filters
+                   calendar_events GET        /calendar/events(.:format)                                 calendar#events
+            new_admin_user_session GET        /admin_users/login(.:format)                               active_admin/devise/sessions#new
+                admin_user_session POST       /admin_users/login(.:format)                               active_admin/devise/sessions#create
+        destroy_admin_user_session DELETE|GET /admin_users/logout(.:format)                              active_admin/devise/sessions#destroy
+               admin_user_password POST       /admin_users/password(.:format)                            active_admin/devise/passwords#create
+           new_admin_user_password GET        /admin_users/password/new(.:format)                        active_admin/devise/passwords#new
+          edit_admin_user_password GET        /admin_users/password/edit(.:format)                       active_admin/devise/passwords#edit
+                                   PUT        /admin_users/password(.:format)                            active_admin/devise/passwords#update
+                         dashboard            /                                                          dashboard#index
+         roadmap_project_milestone GET        /projects/:project_id/milestones/:id/roadmap(.:format)     milestones#roadmap
+        complete_project_milestone GET        /projects/:project_id/milestones/:id/complete(.:format)    milestones#complete
+          revive_project_milestone GET        /projects/:project_id/milestones/:id/revive(.:format)      milestones#revive
+   batch_action_project_milestones POST       /projects/:project_id/milestones/batch_action(.:format)    milestones#batch_action
+                project_milestones GET        /projects/:project_id/milestones(.:format)                 milestones#index
+                                   POST       /projects/:project_id/milestones(.:format)                 milestones#create
+             new_project_milestone GET        /projects/:project_id/milestones/new(.:format)             milestones#new
+            edit_project_milestone GET        /projects/:project_id/milestones/:id/edit(.:format)        milestones#edit
+                 project_milestone GET        /projects/:project_id/milestones/:id(.:format)             milestones#show
+                                   PUT        /projects/:project_id/milestones/:id(.:format)             milestones#update
+                                   DELETE     /projects/:project_id/milestones/:id(.:format)             milestones#destroy
+                          calendar            /calendar(.:format)                                        calendar#index
+               hours_worked_report            /hours_worked_report(.:format)                             hours_worked_report#index
+          hours_worked_report_view POST       /hours_worked_report/view(.:format)                        hours_worked_report#view
+                    project_report            /project_report(.:format)                                  project_report#index
+               project_report_view POST       /project_report/view(.:format)                             project_report#view
+                employee_timesheet            /employee_timesheet(.:format)                              employee_timesheet#index
+           employee_timesheet_view POST       /employee_timesheet/view(.:format)                         employee_timesheet#view
+                     ticket_report            /ticket_report(.:format)                                   ticket_report#index
+                ticket_report_view POST       /ticket_report/view(.:format)                              ticket_report#view
+             ticket_report_tickets POST       /ticket_report/tickets(.:format)                           ticket_report#tickets
+                   company_roadmap            /company_roadmap(.:format)                                 company_roadmap#index
+                batch_action_teams POST       /teams/batch_action(.:format)                              teams#batch_action
+                             teams GET        /teams(.:format)                                           teams#index
+                                   POST       /teams(.:format)                                           teams#create
+                          new_team GET        /teams/new(.:format)                                       teams#new
+                         edit_team GET        /teams/:id/edit(.:format)                                  teams#edit
+                              team GET        /teams/:id(.:format)                                       teams#show
+                                   PUT        /teams/:id(.:format)                                       teams#update
+                                   DELETE     /teams/:id(.:format)                                       teams#destroy
+                       move_ticket GET        /tickets/:id/move(.:format)                                tickets#move
+                start_timer_ticket POST       /tickets/:id/start_timer(.:format)                         tickets#start_timer
+                ticket_time_ticket GET        /tickets/:id/ticket_time(.:format)                         tickets#ticket_time
+                 stop_timer_ticket POST       /tickets/:id/stop_timer(.:format)                          tickets#stop_timer
+            update_comment_tickets POST       /tickets/update_comment(.:format)                          tickets#update_comment
+             edit_multiple_tickets POST       /tickets/edit_multiple(.:format)                           tickets#edit_multiple
+              batch_action_tickets POST       /tickets/batch_action(.:format)                            tickets#batch_action
+                           tickets GET        /tickets(.:format)                                         tickets#index
+                                   POST       /tickets(.:format)                                         tickets#create
+                        new_ticket GET        /tickets/new(.:format)                                     tickets#new
+                       edit_ticket GET        /tickets/:id/edit(.:format)                                tickets#edit
+                            ticket GET        /tickets/:id(.:format)                                     tickets#show
+                                   PUT        /tickets/:id(.:format)                                     tickets#update
+                                   DELETE     /tickets/:id(.:format)                                     tickets#destroy
+               move_project_ticket GET        /projects/:project_id/tickets/:id/move(.:format)           tickets#move
+        start_timer_project_ticket POST       /projects/:project_id/tickets/:id/start_timer(.:format)    tickets#start_timer
+        ticket_time_project_ticket GET        /projects/:project_id/tickets/:id/ticket_time(.:format)    tickets#ticket_time
+         stop_timer_project_ticket POST       /projects/:project_id/tickets/:id/stop_timer(.:format)     tickets#stop_timer
+    update_comment_project_tickets POST       /projects/:project_id/tickets/update_comment(.:format)     tickets#update_comment
+     edit_multiple_project_tickets POST       /projects/:project_id/tickets/edit_multiple(.:format)      tickets#edit_multiple
+      batch_action_project_tickets POST       /projects/:project_id/tickets/batch_action(.:format)       tickets#batch_action
+                   project_tickets GET        /projects/:project_id/tickets(.:format)                    tickets#index
+                                   POST       /projects/:project_id/tickets(.:format)                    tickets#create
+                new_project_ticket GET        /projects/:project_id/tickets/new(.:format)                tickets#new
+               edit_project_ticket GET        /projects/:project_id/tickets/:id/edit(.:format)           tickets#edit
+                    project_ticket GET        /projects/:project_id/tickets/:id(.:format)                tickets#show
+                                   PUT        /projects/:project_id/tickets/:id(.:format)                tickets#update
+                                   DELETE     /projects/:project_id/tickets/:id(.:format)                tickets#destroy
+              batch_action_clients POST       /clients/batch_action(.:format)                            clients#batch_action
+                           clients GET        /clients(.:format)                                         clients#index
+                                   POST       /clients(.:format)                                         clients#create
+                        new_client GET        /clients/new(.:format)                                     clients#new
+                       edit_client GET        /clients/:id/edit(.:format)                                clients#edit
+                            client GET        /clients/:id(.:format)                                     clients#show
+                                   PUT        /clients/:id(.:format)                                     clients#update
+                                   DELETE     /clients/:id(.:format)                                     clients#destroy
+      batch_action_client_contacts POST       /clients/:client_id/contacts/batch_action(.:format)        contacts#batch_action
+                   client_contacts GET        /clients/:client_id/contacts(.:format)                     contacts#index
+                                   POST       /clients/:client_id/contacts(.:format)                     contacts#create
+                new_client_contact GET        /clients/:client_id/contacts/new(.:format)                 contacts#new
+               edit_client_contact GET        /clients/:client_id/contacts/:id/edit(.:format)            contacts#edit
+                    client_contact GET        /clients/:client_id/contacts/:id(.:format)                 contacts#show
+                                   PUT        /clients/:client_id/contacts/:id(.:format)                 contacts#update
+                                   DELETE     /clients/:client_id/contacts/:id(.:format)                 contacts#destroy
+batch_action_project_project_files POST       /projects/:project_id/project_files/batch_action(.:format) project_files#batch_action
+             project_project_files GET        /projects/:project_id/project_files(.:format)              project_files#index
+                                   POST       /projects/:project_id/project_files(.:format)              project_files#create
+          new_project_project_file GET        /projects/:project_id/project_files/new(.:format)          project_files#new
+         edit_project_project_file GET        /projects/:project_id/project_files/:id/edit(.:format)     project_files#edit
+              project_project_file GET        /projects/:project_id/project_files/:id(.:format)          project_files#show
+                                   PUT        /projects/:project_id/project_files/:id(.:format)          project_files#update
+                                   DELETE     /projects/:project_id/project_files/:id(.:format)          project_files#destroy
+      batch_action_ticket_statuses POST       /ticket_statuses/batch_action(.:format)                    ticket_statuses#batch_action
+                   ticket_statuses GET        /ticket_statuses(.:format)                                 ticket_statuses#index
+                                   POST       /ticket_statuses(.:format)                                 ticket_statuses#create
+                 new_ticket_status GET        /ticket_statuses/new(.:format)                             ticket_statuses#new
+                edit_ticket_status GET        /ticket_statuses/:id/edit(.:format)                        ticket_statuses#edit
+                     ticket_status GET        /ticket_statuses/:id(.:format)                             ticket_statuses#show
+                                   PUT        /ticket_statuses/:id(.:format)                             ticket_statuses#update
+                                   DELETE     /ticket_statuses/:id(.:format)                             ticket_statuses#destroy
+    batch_action_ticket_priorities POST       /ticket_priorities/batch_action(.:format)                  ticket_priorities#batch_action
+                 ticket_priorities GET        /ticket_priorities(.:format)                               ticket_priorities#index
+                                   POST       /ticket_priorities(.:format)                               ticket_priorities#create
+               new_ticket_priority GET        /ticket_priorities/new(.:format)                           ticket_priorities#new
+              edit_ticket_priority GET        /ticket_priorities/:id/edit(.:format)                      ticket_priorities#edit
+                   ticket_priority GET        /ticket_priorities/:id(.:format)                           ticket_priorities#show
+                                   PUT        /ticket_priorities/:id(.:format)                           ticket_priorities#update
+                                   DELETE     /ticket_priorities/:id(.:format)                           ticket_priorities#destroy
+                   roadmap_project GET        /projects/:id/roadmap(.:format)                            projects#roadmap
+                whiteboard_project GET        /projects/:id/whiteboard(.:format)                         projects#whiteboard
+           edit_whiteboard_project GET        /projects/:id/edit_whiteboard(.:format)                    projects#edit_whiteboard
+           save_whiteboard_project PUT        /projects/:id/save_whiteboard(.:format)                    projects#save_whiteboard
+                   archive_project GET        /projects/:id/archive(.:format)                            projects#archive
+                 unarchive_project GET        /projects/:id/unarchive(.:format)                          projects#unarchive
+                   switch_projects POST       /projects/switch(.:format)                                 projects#switch
+             batch_action_projects POST       /projects/batch_action(.:format)                           projects#batch_action
+                          projects GET        /projects(.:format)                                        projects#index
+                                   POST       /projects(.:format)                                        projects#create
+                       new_project GET        /projects/new(.:format)                                    projects#new
+                      edit_project GET        /projects/:id/edit(.:format)                               projects#edit
+                           project GET        /projects/:id(.:format)                                    projects#show
+                                   PUT        /projects/:id(.:format)                                    projects#update
+                                   DELETE     /projects/:id(.:format)                                    projects#destroy
+        change_password_admin_user GET        /admin_users/:id/change_password(.:format)                 admin_users#change_password
+             deactivate_admin_user GET        /admin_users/:id/deactivate(.:format)                      admin_users#deactivate
+               activate_admin_user GET        /admin_users/:id/activate(.:format)                        admin_users#activate
+process_password_change_admin_user PUT        /admin_users/:id/process_password_change(.:format)         admin_users#process_password_change
+               profile_admin_users GET        /admin_users/profile(.:format)                             admin_users#profile
+          batch_action_admin_users POST       /admin_users/batch_action(.:format)                        admin_users#batch_action
+                       admin_users GET        /admin_users(.:format)                                     admin_users#index
+                                   POST       /admin_users(.:format)                                     admin_users#create
+                    new_admin_user GET        /admin_users/new(.:format)                                 admin_users#new
+                   edit_admin_user GET        /admin_users/:id/edit(.:format)                            admin_users#edit
+                        admin_user GET        /admin_users/:id(.:format)                                 admin_users#show
+                                   PUT        /admin_users/:id(.:format)                                 admin_users#update
+                                   DELETE     /admin_users/:id(.:format)                                 admin_users#destroy
+                            sprint            /sprint(.:format)                                          sprint#index
+    batch_action_ticket_categories POST       /ticket_categories/batch_action(.:format)                  ticket_categories#batch_action
+                 ticket_categories GET        /ticket_categories(.:format)                               ticket_categories#index
+                                   POST       /ticket_categories(.:format)                               ticket_categories#create
+               new_ticket_category GET        /ticket_categories/new(.:format)                           ticket_categories#new
+              edit_ticket_category GET        /ticket_categories/:id/edit(.:format)                      ticket_categories#edit
+                   ticket_category GET        /ticket_categories/:id(.:format)                           ticket_categories#show
+                                   PUT        /ticket_categories/:id(.:format)                           ticket_categories#update
+                                   DELETE     /ticket_categories/:id(.:format)                           ticket_categories#destroy
+             batch_action_comments POST       /comments/batch_action(.:format)                           comments#batch_action
+                          comments GET        /comments(.:format)                                        comments#index
+                                   POST       /comments(.:format)                                        comments#create
+                       new_comment GET        /comments/new(.:format)                                    comments#new
+                      edit_comment GET        /comments/:id/edit(.:format)                               comments#edit
+                           comment GET        /comments/:id(.:format)                                    comments#show
+                                   PUT        /comments/:id(.:format)                                    comments#update
+                                   DELETE     /comments/:id(.:format)                                    comments#destroy
+        destroy_admin_user_session GET        /logout(.:format)                                          active_admin/devise/sessions#destroy
+            new_admin_user_session GET        /login(.:format)                                           active_admin/devise/sessions#new
+         create_admin_user_session POST       /login(.:format)                                           active_admin/devise/sessions#create

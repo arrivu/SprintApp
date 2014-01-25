@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails SprintApp: development" uuid="2d603e15-f553-46d5-9fd0-69d7ba1e9b00">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails SprintApp: test" uuid="6fbf410e-1b6f-40b0-9947-e826caeccc4c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails SprintApp: cucumber" uuid="7b1f94ea-948f-4dba-93bc-1057e417de93">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails SprintApp: production" uuid="c06598fe-f219-4127-9a31-15c6326f72de">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="790159717">
+    <data-source source="LOCAL" name="Rails SprintApp: development" uuid="2d603e15-f553-46d5-9fd0-69d7ba1e9b00">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/sprintapp_production</jdbc-url>
+      <user-name>sprintapp</user-name>
+      <user-password>dfd9dfdadfd8dfc3dfc4dfdedfcbdfdadfda</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails SprintApp: test" uuid="6fbf410e-1b6f-40b0-9947-e826caeccc4c">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:sprint_app_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails SprintApp: cucumber" uuid="7b1f94ea-948f-4dba-93bc-1057e417de93">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:sprint_app_cucumber</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails SprintApp: production" uuid="c06598fe-f219-4127-9a31-15c6326f72de">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:sprintapp_production</jdbc-url>
+      <user-password>dfd9dfdadfd8dfc3dfc4dfdedfcbdfdadfda</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

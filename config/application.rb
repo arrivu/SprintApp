@@ -44,7 +44,7 @@ module Timetracker
     config.assets.enabled = true
     
     # Set the default time zone
-    config.time_zone = "Eastern Time (US & Canada)"
+    config.time_zone = "Chennai"
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

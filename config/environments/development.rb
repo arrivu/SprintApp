@@ -31,7 +31,7 @@ Timetracker::Application.configure do
   config.assets.debug = true
   
   # ActionMailer Config
-  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = false
   config.action_mailer.default_url_options = { :host => 'localhost:5000' }
   config.action_mailer.asset_host = 'http://localhost:5000'
   config.action_mailer.delivery_method = :sendmail

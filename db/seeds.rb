@@ -1,5 +1,6 @@
 # Create a default user
-AdminUser.create! first_name: "First", last_name: "User", email: "admin@example.com", password: "password", password_confirmation: "password", time_zone: Rails.application.config.time_zone, role: "admin"
+AdminUser.create! first_name: "mani", last_name: "narayanan", email: "mani@arrivusystems.com", password: "admin123$", password_confirmation: "admin123$", time_zone: Rails.application.config.time_zone, role: "admin"
+AdminUser.create! first_name: "needhu", last_name: "c", email: "needhu@arrivusystems.com", password: "admin123$", password_confirmation: "admin123$", time_zone: Rails.application.config.time_zone, role: "admin"
 
  # Setup the bundled trackers
 %w(Bug Design Development Project\ Management QA).each do |title|
